@@ -1,0 +1,12 @@
+C:\Users\fabro\source\repos\Mineral_Management\MineralAPI\Mineral_Management\Mineral_Management.Data\bin\Release\netstandard2.0\Mineral_Management.Data.deps.json
+C:\Users\fabro\source\repos\Mineral_Management\MineralAPI\Mineral_Management\Mineral_Management.Data\bin\Release\netstandard2.0\Mineral_Management.Data.dll
+C:\Users\fabro\source\repos\Mineral_Management\MineralAPI\Mineral_Management\Mineral_Management.Data\bin\Release\netstandard2.0\Mineral_Management.Data.pdb
+C:\Users\fabro\source\repos\Mineral_Management\MineralAPI\Mineral_Management\Mineral_Management.Data\bin\Release\netstandard2.0\Mineral_Management.Business.dll
+C:\Users\fabro\source\repos\Mineral_Management\MineralAPI\Mineral_Management\Mineral_Management.Data\bin\Release\netstandard2.0\Mineral_Management.Business.pdb
+C:\Users\fabro\source\repos\Mineral_Management\MineralAPI\Mineral_Management\Mineral_Management.Data\obj\Release\netstandard2.0\Mineral_Management.Data.csprojAssemblyReference.cache
+C:\Users\fabro\source\repos\Mineral_Management\MineralAPI\Mineral_Management\Mineral_Management.Data\obj\Release\netstandard2.0\Mineral_Management.Data.csproj.CoreCompileInputs.cache
+C:\Users\fabro\source\repos\Mineral_Management\MineralAPI\Mineral_Management\Mineral_Management.Data\obj\Release\netstandard2.0\Mineral_Management.Data.AssemblyInfoInputs.cache
+C:\Users\fabro\source\repos\Mineral_Management\MineralAPI\Mineral_Management\Mineral_Management.Data\obj\Release\netstandard2.0\Mineral_Management.Data.AssemblyInfo.cs
+C:\Users\fabro\source\repos\Mineral_Management\MineralAPI\Mineral_Management\Mineral_Management.Data\obj\Release\netstandard2.0\Mineral_Management.Data.csproj.CopyComplete
+C:\Users\fabro\source\repos\Mineral_Management\MineralAPI\Mineral_Management\Mineral_Management.Data\obj\Release\netstandard2.0\Mineral_Management.Data.dll
+C:\Users\fabro\source\repos\Mineral_Management\MineralAPI\Mineral_Management\Mineral_Management.Data\obj\Release\netstandard2.0\Mineral_Management.Data.pdb

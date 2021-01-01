@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "8Vn9HOFR2mKm00LI1GzeBZmvvNMIUP0ybKO16zJ5uDHeoexy5x2XL4obKvD7wWYyaFeLJa2z3atTagd0eW88OQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\fabro\\source\\repos\\Mineral_Management\\MineralAPI\\Mineral_Management\\Mineral_Management.Business\\Mineral_Management.Business.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\fabro\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\fabro\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

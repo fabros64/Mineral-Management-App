@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:models="clr-namespace:Mineral_Management.Models;assembly=Mineral_Management"
+             xmlns:buttons="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+             xmlns:effectsView="clr-namespace:Syncfusion.XForms.EffectsView;assembly=Syncfusion.Core.XForms"
+             xmlns:borders="clr-namespace:Syncfusion.XForms.Border;assembly=Syncfusion.Core.XForms"
+             xmlns:range="clr-namespace:Syncfusion.SfRangeSlider.XForms;assembly=Syncfusion.SfRangeSlider.XForms"
+             x:Class="Mineral_Management.Views.CalculationPage"
+             Title="{Binding Title}">
+
+    <ContentPage.Content>
+        
+        <StackLayout BackgroundColor="AliceBlue">
+            <Label Text="Daily diet products" Margin="14,3,10,1" FontSize="Small" FontAttributes="Italic"
+                   TextColor="CadetBlue"></Label>
+            <BoxView HeightRequest="0.5" BackgroundColor="DarkOrchid"  HorizontalOptions="FillAndExpand" />
+
+            <borders:SfBorder BorderWidth="2" BorderColor="DarkCyan">
+            <ListView x:Name="ItemsListView" 
+                      ItemsSource="{Binding DailyDietProductsList}"
+                      HasUnevenRows="true"
+                      VerticalOptions="FillAndExpand"
+                      VerticalScrollBarVisibility="Always"
+                      SeparatorColor="Black"
+                      HeightRequest="834"
+                      RefreshCommand="{Binding LoadItemsCommand}"
+                      IsPullToRefreshEnabled="true"
+                      IsRefreshing="{Binding IsBusy, Mode=OneWay}"
+                      CachingStrategy="RecycleElement"
+                      ItemSelected="OnItemSelected">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell x:DataType="models:DailyDietProduct" >
+
+                                <Grid BackgroundColor="LightCyan">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="75" />
+                                            <ColumnDefinition Width="75" />
+                                        </Grid.ColumnDefinitions>
+
+                                        <StackLayout VerticalOptions="Center" Grid.Column="0" Padding="8">
+                                            <Label  Text="{Binding Name}" 
+                                                                        LineBreakMode="NoWrap" 
+                                                                        Style="{DynamicResource ListItemTextStyle}" 
+                                                                        FontSize="15" FontAttributes="Bold"/>
+                                            
+                                                <Grid>
+                                                    <Grid.ColumnDefinitions>
+                                                        <ColumnDefinition Width="*"/>
+                                                        <ColumnDefinition Width="3*"/>
+                                                    </Grid.ColumnDefinitions>
+
+                                                    <Entry Grid.Column="0"  Text="{Binding Amount}" 
+                                                                                    
+                                                                                    FontSize="15" 
+                                                                                    FontAttributes="Bold"
+                                                                                    Completed="Entry_OnCompleted"
+                                                                                    TextChanged="Amount_OnTextChanged"
+                                                                                    Focused="Amount_Focused"
+                                                                                    Unfocused="Amount_Unfocused"
+                                                                                     />
+                                                    <Label Grid.Column="1" Text=" grams"
+                                                                                   VerticalTextAlignment="Center"
+                                                                                   Style="{DynamicResource ListItemDetailTextStyle}"
+                                                                                   FontSize="13"/>
+                                                </Grid>
+                                            
+                                        </StackLayout>
+
+                                        <ImageButton Grid.Column="1" 
+                                                                         WidthRequest="75"
+                                                                         HeightRequest="40"
+                                                                         Margin="0,0,10,0"
+                                                                         Aspect="AspectFit"
+                                                                         HorizontalOptions="End"  
+                                                                         Source="edit3.png"
+                                                                         Clicked="EditDailyProduct_Clicked"
+                                                                         BackgroundColor="LightCyan">
+                                        </ImageButton>
+
+                                        <ImageButton Grid.Column="2"
+                                                                    WidthRequest="75"
+                                                                    HeightRequest="40"
+                                                                    Margin="0,0,10,0"
+                                                                    Aspect="AspectFit"
+                                                                    HorizontalOptions="End"  
+                                                                    Source="delete3.png"
+                                                                    Clicked="DeleteDailyProduct_Clicked"
+                                                                    BackgroundColor="LightCyan">
+                                        </ImageButton>
+                                </Grid>
+
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+            </borders:SfBorder>
+
+            <TableView Intent="Form" HasUnevenRows="True">
+                <TableRoot >
+                    <TableSection Title="Necessary information for calculation" TextColor="CadetBlue">
+                        
+                        <ViewCell>
+                            <borders:SfBorder BorderWidth="0.5" BorderColor="DarkCyan" CornerRadius="10">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="4*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="20"/>
+                                        <RowDefinition Height="76"/>
+                                    </Grid.RowDefinitions>
+
+                                    <Label Text="Gender:" Grid.Row="0" Grid.Column="0" 
+                                           Margin="10,5,10,0"></Label>
+
+                                    <StackLayout Grid.Row="0" Grid.Column="1" HorizontalOptions="Center" Margin="2,2,2,0">
+                                        <buttons:SfRadioGroup Orientation="Horizontal">
+                                            <buttons:SfRadioButton ScaleX="1.15" ScaleY="1.15" x:Name="ManRb" Margin="0,0,20,0" Text="Man" IsChecked="True"/>
+                                            <buttons:SfRadioButton ScaleX="1.15" ScaleY="1.15" x:Name="WomanRb" Margin="20,0,0,0" Text="Woman"/>
+                                        </buttons:SfRadioGroup>
+                                    </StackLayout>
+
+                                    <Label Text="Age:" Grid.Row="1" Grid.Column="0"
+                                           Margin="10,0,10,0" VerticalOptions="Center"></Label>
+
+                                    <StackLayout Grid.Row="1" Grid.Column="1">
+
+                                            <range:SfRangeSlider x:Name="AgeSlider" Minimum="1" Maximum="100" SnapsTo="None"  StepFrequency="4"
+                                                             ShowValueLabel="true" TickPlacement="Inline"
+                                                             Orientation="Horizontal" ShowRange="False"
+                                                             Value="55" FlowDirection="LeftToRight" 
+                                                              HeightRequest="76" VerticalOptions="Start"
+                                                               />
+                                    </StackLayout>
+                            </Grid>
+                           </borders:SfBorder>
+                        </ViewCell>
+
+                    </TableSection>
+                    <TableSection Title="Generate Daily Diet Mineral Calculation" TextColor="CadetBlue">
+                        <ViewCell>
+                            <Button Text="Generate Calculation" HeightRequest="36" BackgroundColor="CadetBlue" CornerRadius="25"
+                                    Clicked="GenerateButton_Clicked"></Button>
+                        </ViewCell>
+                    </TableSection>
+                </TableRoot>
+            </TableView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

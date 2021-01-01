@@ -1,0 +1,64 @@
+{
+  "version": 2,
+  "dgSpecHash": "hl1EWp1K47lmi0ceBchCuKqEE9dOf/XNRvzWDYc+CB+A5jyszvjH5oKHa0NdZ+iEeLjNIXjK54gNHEzGKeCEVA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\fabro\\source\\repos\\Mineral_Management\\Mineral_Management\\Mineral_Management\\Mineral_Management.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\fabro\\.nuget\\packages\\microsoft.bcl\\1.1.10\\microsoft.bcl.1.1.10.nupkg.sha512",
+    "C:\\Users\\fabro\\.nuget\\packages\\microsoft.bcl.build\\1.0.14\\microsoft.bcl.build.1.0.14.nupkg.sha512",
+    "C:\\Users\\fabro\\.nuget\\packages\\microsoft.net.http\\2.2.29\\microsoft.net.http.2.2.29.nupkg.sha512",
+    "C:\\Users\\fabro\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\fabro\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\fabro\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\fabro\\.nuget\\packages\\plugin.permissions\\6.0.1\\plugin.permissions.6.0.1.nupkg.sha512",
+    "C:\\Users\\fabro\\.nuget\\packages\\prism.core\\7.2.0.1422\\prism.core.7.2.0.1422.nupkg.sha512",
+    "C:\\Users\\fabro\\.nuget\\packages\\prism.forms\\7.2.0.1422\\prism.forms.7.2.0.1422.nupkg.sha512",
+    "C:\\Users\\fabro\\.nuget\\packages\\prism.unity.forms\\7.2.0.1422\\prism.unity.forms.7.2.0.1422.nupkg.sha512",
+    "C:\\Users\\fabro\\.nuget\\packages\\sqlite-net-pcl\\1.6.292\\sqlite-net-pcl.1.6.292.nupkg.sha512",
+    "C:\\Users\\fabro\\.nuget\\packages\\sqlitepclraw.bundle_green\\1.1.13\\sqlitepclraw.bundle_green.1.1.13.nupkg.sha512",
+    "C:\\Users\\fabro\\.nuget\\packages\\sqlitepclraw.core\\1.1.13\\sqlitepclraw.core.1.1.13.nupkg.sha512",
+    "C:\\Users\\fabro\\.nuget\\packages\\syncfusion.licensing\\18.1.0.55\\syncfusion.licensing.18.1.0.55.nupkg.sha512",
+    "C:\\Users\\fabro\\.nuget\\packages\\syncfusion.xamarin.buttons\\18.1.0.54\\syncfusion.xamarin.buttons.18.1.0.54.nupkg.sha512",
+    "C:\\Users\\fabro\\.nuget\\packages\\syncfusion.xamarin.compression\\18.1.0.55\\syncfusion.xamarin.compression.18.1.0.55.nupkg.sha512",
+    "C:\\Users\\fabro\\.nuget\\packages\\syncfusion.xamarin.core\\18.1.0.55\\syncfusion.xamarin.core.18.1.0.55.nupkg.sha512",
+    "C:\\Users\\fabro\\.nuget\\packages\\syncfusion.xamarin.gridcommon\\18.1.0.55\\syncfusion.xamarin.gridcommon.18.1.0.55.nupkg.sha512",
+    "C:\\Users\\fabro\\.nuget\\packages\\syncfusion.xamarin.pdf\\18.1.0.55\\syncfusion.xamarin.pdf.18.1.0.55.nupkg.sha512",
+    "C:\\Users\\fabro\\.nuget\\packages\\syncfusion.xamarin.sfbusyindicator\\18.1.0.55\\syncfusion.xamarin.sfbusyindicator.18.1.0.55.nupkg.sha512",
+    "C:\\Users\\fabro\\.nuget\\packages\\syncfusion.xamarin.sfchart\\18.1.0.55\\syncfusion.xamarin.sfchart.18.1.0.55.nupkg.sha512",
+    "C:\\Users\\fabro\\.nuget\\packages\\syncfusion.xamarin.sfcombobox\\18.1.0.55\\syncfusion.xamarin.sfcombobox.18.1.0.55.nupkg.sha512",
+    "C:\\Users\\fabro\\.nuget\\packages\\syncfusion.xamarin.sfdatagrid\\18.1.0.55\\syncfusion.xamarin.sfdatagrid.18.1.0.55.nupkg.sha512",
+    "C:\\Users\\fabro\\.nuget\\packages\\syncfusion.xamarin.sfnumerictextbox\\18.1.0.55\\syncfusion.xamarin.sfnumerictextbox.18.1.0.55.nupkg.sha512",
+    "C:\\Users\\fabro\\.nuget\\packages\\syncfusion.xamarin.sfrangeslider\\18.1.0.54\\syncfusion.xamarin.sfrangeslider.18.1.0.54.nupkg.sha512",
+    "C:\\Users\\fabro\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\fabro\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.2\\system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512",
+    "C:\\Users\\fabro\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.2\\system.threading.tasks.extensions.4.5.2.nupkg.sha512",
+    "C:\\Users\\fabro\\.nuget\\packages\\unity\\5.11.7\\unity.5.11.7.nupkg.sha512",
+    "C:\\Users\\fabro\\.nuget\\packages\\unity.abstractions\\5.11.1\\unity.abstractions.5.11.1.nupkg.sha512",
+    "C:\\Users\\fabro\\.nuget\\packages\\unity.container\\5.11.1\\unity.container.5.11.1.nupkg.sha512",
+    "C:\\Users\\fabro\\.nuget\\packages\\xamarin.essentials\\1.5.3.2\\xamarin.essentials.1.5.3.2.nupkg.sha512",
+    "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\4.4.0.991265\\xamarin.forms.4.4.0.991265.nupkg.sha512",
+    "C:\\Users\\fabro\\.nuget\\packages\\xamarin.plugin.filepicker\\2.1.34\\xamarin.plugin.filepicker.2.1.34.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.Bcl 1.1.10' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETStandard,Version=v2.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.Bcl",
+      "targetGraphs": [
+        ".NETStandard,Version=v2.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Microsoft.Net.Http 2.2.29' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETStandard,Version=v2.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Microsoft.Net.Http",
+      "targetGraphs": [
+        ".NETStandard,Version=v2.0"
+      ]
+    }
+  ]
+}

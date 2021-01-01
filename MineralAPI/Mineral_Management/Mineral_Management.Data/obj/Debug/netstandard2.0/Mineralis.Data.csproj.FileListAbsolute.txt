@@ -1,0 +1,5 @@
+C:\Users\m.blaszczak\Desktop\LearningC#\Mineralis.API\Mineralis.Data\bin\Debug\netstandard2.0\Mineralis.Data.deps.json
+C:\Users\m.blaszczak\Desktop\LearningC#\Mineralis.API\Mineralis.Data\bin\Debug\netstandard2.0\Mineralis.Data.dll
+C:\Users\m.blaszczak\Desktop\LearningC#\Mineralis.API\Mineralis.Data\obj\Debug\netstandard2.0\Mineralis.Data.csprojAssemblyReference.cache
+C:\Users\m.blaszczak\Desktop\LearningC#\Mineralis.API\Mineralis.Data\obj\Debug\netstandard2.0\Mineralis.Data.AssemblyInfoInputs.cache
+C:\Users\m.blaszczak\Desktop\LearningC#\Mineralis.API\Mineralis.Data\obj\Debug\netstandard2.0\Mineralis.Data.AssemblyInfo.cs

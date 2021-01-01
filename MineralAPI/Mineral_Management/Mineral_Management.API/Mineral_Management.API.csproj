@@ -1,0 +1,21 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Utils\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="7.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Mineral_Management.Business\Mineral_Management.Business.csproj" />
+    <ProjectReference Include="..\Mineral_Management.Data\Mineral_Management.Data.csproj" />
+  </ItemGroup>
+
+
+</Project>

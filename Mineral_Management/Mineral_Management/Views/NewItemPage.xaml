@@ -1,0 +1,101 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Mineral_Management.Views.NewItemPage"
+             Title="{Binding Title}">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Cancel" Command="{Binding CancelCommand}" >
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="UWP" Value="cancel.png"/>
+                </OnPlatform>
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+        <ToolbarItem Text="Save" Command="{Binding SaveCommand}" >
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="UWP" Value="save.png"/>
+                </OnPlatform>
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Content>
+        
+        <StackLayout Spacing="20" Padding="15" BackgroundColor="Azure">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Grid Grid.Row="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="4*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="3*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Label Text="Name" FontSize="Small" Grid.Row="0" Grid.Column="0" />
+                    <Editor Text="{Binding Item.Name}" FontSize="Small" Grid.Row="0" Grid.Column="1" />
+                    <Label Text="Description" FontSize="Small" HeightRequest="20" Grid.Row="1" Grid.Column="0"/>
+                    <Editor Text="{Binding Item.Description}" FontSize="Small" Margin="0" Grid.Row="1" Grid.Column="1"/>
+
+                    <Label Text="Image" FontSize="Small" Grid.Row="2" Grid.Column="0"/>
+                    <Button x:Name="btnImg" Text="Choose Image" Grid.Row="2" Grid.Column="1" Command="{Binding FilePickCommand}"/>
+               
+                    <Label Text="ImageName" FontSize="Small" Grid.Row="3" Grid.Column="0"/>
+                    <Label x:Name="imgName" Text="{Binding Item.ImageName}" FontSize="Small" Grid.Row="3" Grid.Column="1"/>
+                </Grid>
+
+                <StackLayout Grid.Row="1" BackgroundColor="AliceBlue" VerticalOptions="CenterAndExpand" Spacing="30">
+                    <Label Text="Minerals: (mg amount per 100 grams)" HorizontalOptions="Center" FontAttributes="Bold" FontSize="Medium"/>
+
+                    <Grid RowSpacing="15">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+                            <RowDefinition Height="*" />
+
+                        </Grid.RowDefinitions>
+
+                        <Label VerticalOptions="Center" Text="Phosphorus" FontSize="Micro" Grid.Row="0" Grid.Column="0"/>
+                        <Entry Keyboard="Numeric" x:Name="Phosphorus" Text="{Binding Item.Minerals.Phosphorus}" FontSize="Small" Grid.Row="0" Grid.Column="1"/>
+                        <Label VerticalOptions="Center" Text="Potassium" FontSize="Micro" Grid.Row="0" Grid.Column="2"/>
+                        <Entry Keyboard="Numeric" x:Name="Potassium" Text="{Binding Item.Minerals.Potassium}" FontSize="Small" Grid.Row="0" Grid.Column="3"/>
+                        <Label VerticalOptions="Center" Text="Sodium" FontSize="Micro" Grid.Row="0" Grid.Column="4"/>
+                        <Entry Keyboard="Numeric" x:Name="Sodium" Text="{Binding Item.Minerals.Sodium}" FontSize="Small" Grid.Row="0" Grid.Column="5"/>
+                        <Label VerticalOptions="Center" Text="Calcium" FontSize="Micro" Grid.Row="1" Grid.Column="0"/>
+                        <Entry Keyboard="Numeric" x:Name="Calcium" Text="{Binding Item.Minerals.Calcium}" FontSize="Small" Grid.Row="1" Grid.Column="1"/>
+                        <Label VerticalOptions="Center" Text="Iron" FontSize="Micro" Grid.Row="1" Grid.Column="2"/>
+                        <Entry Keyboard="Numeric" x:Name="Iron" Text="{Binding Item.Minerals.Iron}" FontSize="Small" Grid.Row="1" Grid.Column="3"/>
+                        <Label VerticalOptions="Center" Text="Magnesium" FontSize="Micro" Grid.Row="1" Grid.Column="4"/>
+                        <Entry Keyboard="Numeric" x:Name="Magnesium" Text="{Binding Item.Minerals.Magnesium}" FontSize="Small" Grid.Row="1" Grid.Column="5"/>
+                        <Label VerticalOptions="Center" Text="Zinc" FontSize="Micro" Grid.Row="2" Grid.Column="0"/>
+                        <Entry Keyboard="Numeric" x:Name="Zinc" Text="{Binding Item.Minerals.Zinc}" FontSize="Small" Grid.Row="2" Grid.Column="1"/>
+                        <Label VerticalOptions="Center" Text="Copper" FontSize="Micro" Grid.Row="2" Grid.Column="2"/>
+                        <Entry Keyboard="Numeric" x:Name="Copper" Text="{Binding Item.Minerals.Copper}" FontSize="Small" Grid.Row="2" Grid.Column="3"/>
+                        <Label VerticalOptions="Center" Text="Selenium" FontSize="Micro" Grid.Row="2" Grid.Column="4"/>
+                        <Entry Keyboard="Numeric" x:Name="Selenium" Text="{Binding Item.Minerals.Selenium}" FontSize="Small" Grid.Row="2" Grid.Column="5"/>
+                    </Grid>
+                </StackLayout>
+            </Grid>
+        </StackLayout>
+            
+    </ContentPage.Content>
+</ContentPage>

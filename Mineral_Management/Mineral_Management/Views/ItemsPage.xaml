@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Mineral_Management.Views.ItemsPage"
+             xmlns:borders="clr-namespace:Syncfusion.XForms.Border;assembly=Syncfusion.Core.XForms"
+             xmlns:shimmer="clr-namespace:Syncfusion.XForms.Shimmer;assembly=Syncfusion.Core.XForms"
+             xmlns:mvvm="clr-namespace:Prism;assembly=Prism.Forms"
+             xmlns:busyindicator="clr-namespace:Syncfusion.SfBusyIndicator.XForms;assembly=Syncfusion.SfBusyIndicator.XForms"
+             xmlns:mvvm1="http://prismlibrary.com"
+             mvvm1:ViewModelLocator.AutowireViewModel="True"
+              Title="{Binding Title}"
+             x:Name="BrowseItemsPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Add" Clicked="AddItem_Clicked">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="UWP" Value="add.png"/>
+                    <On Platform="Android" Value="AddBtn.png"/>
+                  
+                </OnPlatform>
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="AliceBlue">
+            <SearchBar TextChanged="SearchBar_TextChanged" Margin="0,0,0,0" Opacity="20" FontFamily="Bold" VerticalOptions="FillAndExpand" BackgroundColor="DeepSkyBlue"  Placeholder="Search..." />
+
+            <busyindicator:SfBusyIndicator VerticalOptions="Center"
+                                           Margin="0,100,0,0"
+                                           Scale="3"
+                                           HorizontalOptions="Center"
+                                           TextColor="CadetBlue"
+                                           Title="Loading..."
+                                           TitlePlacement="Top"
+                                           Duration="50"
+                                           TextSize="16"
+                                           AnimationType ="Gear" 
+                                           EnableAnimation="True"
+                                           IsBusy="{Binding IsBusy}"/>
+
+            
+                    <ListView x:Name="ItemsListView"                       
+                              ItemsSource="{Binding Items}"
+                              VerticalOptions="FillAndExpand"
+                              HasUnevenRows="true"
+                              RefreshCommand="{Binding LoadItemsCommand}"
+                              IsPullToRefreshEnabled="true"
+                              IsRefreshing="{Binding IsBusy, Mode=OneWay}"
+                              CachingStrategy="RecycleElement"
+                              ItemSelected="OnItemSelected"
+                              SeparatorColor="Gray">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <borders:SfBorder BorderWidth="0.5" BorderColor="LightCyan" HasShadow="True">
+                                    <Grid >
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="85" />
+                                        </Grid.ColumnDefinitions>
+                                    
+                                        <StackLayout VerticalOptions="Center" Grid.Column="0" Padding="10">
+                                            <Label  Text="{Binding Name}" 
+                                                    LineBreakMode="NoWrap" 
+                                                    Style="{DynamicResource ListItemTextStyle}" 
+                                                    FontSize="16" FontAttributes="Bold"/>
+                                            <Label  Text="{Binding Description}" 
+                                                    LineBreakMode="TailTruncation"
+                                                    Style="{DynamicResource ListItemDetailTextStyle}"
+                                                    FontSize="13" />
+                                        </StackLayout>
+                                            
+                                        <Image x:Name="img" Grid.Column="1"
+                                               WidthRequest="85"
+                                               HeightRequest="90"
+                                               Margin="5,2,10,2"
+                                                   Aspect="AspectFit"
+                                                   HorizontalOptions="End"  
+                                                   Source="{Binding ListImg}"
+                                                   >
+                                        </Image>
+                                    </Grid>
+                                </borders:SfBorder>
+
+                                </ViewCell>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                    
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

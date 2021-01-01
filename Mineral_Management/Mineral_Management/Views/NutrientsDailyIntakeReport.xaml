@@ -1,0 +1,315 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:viewModels="clr-namespace:Mineral_Management.ViewModels;assembly=Mineral_Management"
+             xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms"
+             xmlns:syncfusion="clr-namespace:Syncfusion.SfDataGrid.XForms;assembly=Syncfusion.SfDataGrid.XForms"
+             xmlns:border="clr-namespace:Syncfusion.XForms.Border;assembly=Syncfusion.Core.XForms"
+             mc:Ignorable="d"
+             x:Class="Mineral_Management.Views.NutrientsDailyIntakeReport"
+             Title="{Binding Title}" >
+    <ContentPage.Content>
+
+        <StackLayout BindingContext="{Binding Report}" BackgroundColor="AliceBlue">
+                <TableView HasUnevenRows="True">
+                    <TableRoot>
+                        <TableSection Title="Amount of minerals supplied with the daily diet">
+                            <ViewCell>
+                                <border:SfBorder BorderWidth="0.5" BorderColor="DarkCyan">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="2*"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+
+                                    <Label Grid.Column="0" Grid.Row="0" Text="Phosphorus: " HorizontalOptions="Center"></Label>
+                                    <Label Grid.Column="1" Grid.Row="0" Text="{Binding DailyDietSumOfMinerals.PhosphorusTotal}" HorizontalOptions="Center"></Label>
+                                    <Label Grid.Column="2" Grid.Row="0" Text="mg" HorizontalOptions="Center"></Label>
+
+                                    <Label Grid.Column="0" Grid.Row="1" Text="Potassium: " HorizontalOptions="Center"></Label>
+                                    <Label Grid.Column="1" Grid.Row="1" Text="{Binding DailyDietSumOfMinerals.PotassiumTotal}" HorizontalOptions="Center"></Label>
+                                    <Label Grid.Column="2" Grid.Row="1" Text="mg" HorizontalOptions="Center"></Label>
+
+
+                                    <Label Grid.Column="0" Grid.Row="2" Text="Sodium: " HorizontalOptions="Center"></Label>
+                                    <Label Grid.Column="1" Grid.Row="2" Text="{Binding DailyDietSumOfMinerals.SodiumTotal}" HorizontalOptions="Center"></Label>
+                                    <Label Grid.Column="2" Grid.Row="2" Text="mg" HorizontalOptions="Center"></Label>
+
+
+                                    <Label Grid.Column="0" Grid.Row="3" Text="Calcium: " HorizontalOptions="Center"></Label>
+                                    <Label Grid.Column="1" Grid.Row="3" Text="{Binding DailyDietSumOfMinerals.CalciumTotal}" HorizontalOptions="Center"></Label>
+                                    <Label Grid.Column="2" Grid.Row="3" Text="mg" HorizontalOptions="Center"></Label>
+
+
+                                    <Label Grid.Column="0" Grid.Row="4" Text="Iron: " HorizontalOptions="Center"></Label>
+                                    <Label Grid.Column="1" Grid.Row="4" Text="{Binding DailyDietSumOfMinerals.IronTotal}" HorizontalOptions="Center"></Label>
+                                    <Label Grid.Column="2" Grid.Row="4" Text="mg" HorizontalOptions="Center"></Label>
+
+
+                                    <Label Grid.Column="0" Grid.Row="5" Text="Magnesium: " HorizontalOptions="Center"></Label>
+                                    <Label Grid.Column="1" Grid.Row="5" Text="{Binding DailyDietSumOfMinerals.MagnesiumTotal}" HorizontalOptions="Center"></Label>
+                                    <Label Grid.Column="2" Grid.Row="5" Text="mg" HorizontalOptions="Center"></Label>
+
+
+                                    <Label Grid.Column="0" Grid.Row="6" Text="Zinc: " HorizontalOptions="Center"></Label>
+                                    <Label Grid.Column="1" Grid.Row="6" Text="{Binding DailyDietSumOfMinerals.ZincTotal}" HorizontalOptions="Center"></Label>
+                                    <Label Grid.Column="2" Grid.Row="6" Text="mg" HorizontalOptions="Center"></Label>
+
+
+                                    <Label Grid.Column="0" Grid.Row="7" Text="Copper: " HorizontalOptions="Center"></Label>
+                                    <Label Grid.Column="1" Grid.Row="7" Text="{Binding DailyDietSumOfMinerals.CopperTotal}" HorizontalOptions="Center"></Label>
+                                    <Label Grid.Column="2" Grid.Row="7" Text="mg" HorizontalOptions="Center"></Label>
+
+
+                                    <Label Grid.Column="0" Grid.Row="8" Text="Selenium: " HorizontalOptions="Center"></Label>
+                                    <Label Grid.Column="1" Grid.Row="8" Text="{Binding DailyDietSumOfMinerals.SeleniumTotal}" HorizontalOptions="Center"></Label>
+                                    <Label Grid.Column="2" Grid.Row="8" Text="mg" HorizontalOptions="Center"></Label>
+                                </Grid>
+                                </border:SfBorder>
+                            </ViewCell>
+                        </TableSection>
+
+                        <TableSection Title="Your daily minerals requirement" BindingContext="{Binding PersonNutrientsDailyIntake}">
+                            <ViewCell BindingContext="{Binding MineralsDailyIntake}">
+                                <border:SfBorder BorderWidth="0.5" BorderColor="DarkCyan">
+                                <Grid >
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="0.5*"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+
+                                    
+                                    <Label Grid.Column="1" Grid.Row="0" Text="EAR*" FontAttributes="Bold" HorizontalOptions="Center"></Label>
+                                    <Label Grid.Column="2" Grid.Row="0" Text="RDI*" FontAttributes="Bold" HorizontalOptions="Center"></Label>
+                                    <Label Grid.Column="3" Grid.Row="0" Text="AI*" FontAttributes="Bold" HorizontalOptions="Center"></Label>
+                                    <Label Grid.Column="4" Grid.Row="0" Text="UI*" FontAttributes="Bold" HorizontalOptions="Center"></Label>
+                                    
+
+                                    <Label Grid.Column="0" Grid.Row="1" Text="Phosphorus: "  HorizontalOptions="Center"></Label>
+                                    <Label Grid.Column="1" Grid.Row="1" Text="{Binding Phosphorus.EstimatedAverageRequirement}"  HorizontalOptions="Center"></Label>
+                                    <Label Grid.Column="2" Grid.Row="1" Text="{Binding Phosphorus.RecommendedDietaryIntake}"  HorizontalOptions="Center"></Label>
+                                    <Label Grid.Column="3" Grid.Row="1" Text="N/A"  HorizontalOptions="Center"></Label>
+                                    <Label Grid.Column="4" Grid.Row="1" Text="{Binding Phosphorus.UpperLevelOfIntake}"  HorizontalOptions="Center"></Label>
+                                    <Label Grid.Column="5" Grid.Row="1" Text="mg"  HorizontalOptions="Center"></Label>
+
+                                    <Label Grid.Column="0" Grid.Row="2" Text="Potassium: "  HorizontalOptions="Center"></Label>
+                                    <Label Grid.Column="1" Grid.Row="2" Text="N/A"  HorizontalOptions="Center"></Label>
+                                    <Label Grid.Column="2" Grid.Row="2" Text="N/A"  HorizontalOptions="Center"></Label>
+                                    <Label Grid.Column="3" Grid.Row="2" Text="{Binding Potassium.AdequateIntake}"  HorizontalOptions="Center"></Label>
+                                    <Label Grid.Column="4" Grid.Row="2" Text="N/A"  HorizontalOptions="Center"></Label>
+                                    <Label Grid.Column="5" Grid.Row="2" Text="mg"  HorizontalOptions="Center"></Label>
+
+
+                                    <Label Grid.Column="0" Grid.Row="3" Text="Sodium: "  HorizontalOptions="Center"></Label>
+                                    <Label Grid.Column="1" Grid.Row="3" Text="N/A"  HorizontalOptions="Center"></Label>
+                                    <Label Grid.Column="2" Grid.Row="3" Text="N/A"  HorizontalOptions="Center"></Label>
+                                    <Label Grid.Column="3" Grid.Row="3" Text="{Binding Sodium.AdequateIntake}"  HorizontalOptions="Center"></Label>
+                                    <Label Grid.Column="4" Grid.Row="3" Text="{Binding Sodium.UpperLevelOfIntake}"  HorizontalOptions="Center"></Label>
+                                    <Label Grid.Column="5" Grid.Row="3" Text="mg"  HorizontalOptions="Center"></Label>
+
+
+                                    <Label Grid.Column="0" Grid.Row="4" Text="Calcium: "  HorizontalOptions="Center"></Label>
+                                    <Label Grid.Column="1" Grid.Row="4" Text="{Binding Calcium.EstimatedAverageRequirement}"  HorizontalOptions="Center"></Label>
+                                    <Label Grid.Column="2" Grid.Row="4" Text="{Binding Calcium.RecommendedDietaryIntake}"  HorizontalOptions="Center"></Label>
+                                    <Label Grid.Column="3" Grid.Row="4" Text="N/A"  HorizontalOptions="Center"></Label>
+                                    <Label Grid.Column="4" Grid.Row="4" Text="{Binding Calcium.UpperLevelOfIntake}"  HorizontalOptions="Center"></Label>
+                                    <Label Grid.Column="5" Grid.Row="4" Text="mg"  HorizontalOptions="Center"></Label>
+
+
+                                    <Label Grid.Column="0" Grid.Row="5" Text="Iron: "  HorizontalOptions="Center"></Label>
+                                    <Label Grid.Column="1" Grid.Row="5" Text="{Binding Iron.EstimatedAverageRequirement}"  HorizontalOptions="Center"></Label>
+                                    <Label Grid.Column="2" Grid.Row="5" Text="{Binding Iron.RecommendedDietaryIntake}"  HorizontalOptions="Center"></Label>
+                                    <Label Grid.Column="3" Grid.Row="5" Text="N/A"  HorizontalOptions="Center"></Label>
+                                    <Label Grid.Column="4" Grid.Row="5" Text="{Binding Iron.UpperLevelOfIntake}"  HorizontalOptions="Center"></Label>
+                                    <Label Grid.Column="5" Grid.Row="5" Text="mg"  HorizontalOptions="Center"></Label>
+
+
+                                    <Label Grid.Column="0" Grid.Row="6" Text="Magnesium: "  HorizontalOptions="Center"></Label>
+                                    <Label Grid.Column="1" Grid.Row="6" Text="{Binding Magnesium.EstimatedAverageRequirement}"  HorizontalOptions="Center"></Label>
+                                    <Label Grid.Column="2" Grid.Row="6" Text="{Binding Magnesium.RecommendedDietaryIntake}"  HorizontalOptions="Center"></Label>
+                                    <Label Grid.Column="3" Grid.Row="6" Text="N/A"  HorizontalOptions="Center"></Label>
+                                    <Label Grid.Column="4" Grid.Row="6" Text="N/A"  HorizontalOptions="Center"></Label>
+                                    <Label Grid.Column="5" Grid.Row="6" Text="mg"  HorizontalOptions="Center"></Label>
+
+
+                                    <Label Grid.Column="0" Grid.Row="7" Text="Zinc: "  HorizontalOptions="Center"></Label>
+                                    <Label Grid.Column="1" Grid.Row="7" Text="{Binding Zinc.EstimatedAverageRequirement}"  HorizontalOptions="Center"></Label>
+                                    <Label Grid.Column="2" Grid.Row="7" Text="{Binding Zinc.RecommendedDietaryIntake}"  HorizontalOptions="Center"></Label>
+                                    <Label Grid.Column="3" Grid.Row="7" Text="N/A"  HorizontalOptions="Center"></Label>
+                                    <Label Grid.Column="4" Grid.Row="7" Text="{Binding Zinc.UpperLevelOfIntake}"  HorizontalOptions="Center"></Label>
+                                    <Label Grid.Column="5" Grid.Row="7" Text="mg"  HorizontalOptions="Center"></Label>
+
+
+                                    <Label Grid.Column="0" Grid.Row="8" Text="Copper: "  HorizontalOptions="Center"></Label>
+                                    <Label Grid.Column="1" Grid.Row="8" Text="N/A"  HorizontalOptions="Center"></Label>
+                                    <Label Grid.Column="2" Grid.Row="8" Text="N/A"  HorizontalOptions="Center"></Label>
+                                    <Label Grid.Column="3" Grid.Row="8" Text="{Binding Copper.AdequateIntake}"  HorizontalOptions="Center"></Label>
+                                    <Label Grid.Column="4" Grid.Row="8" Text="{Binding Copper.UpperLevelOfIntake}"  HorizontalOptions="Center"></Label>
+                                    <Label Grid.Column="5" Grid.Row="8" Text="mg"  HorizontalOptions="Center"></Label>
+
+
+                                    <Label Grid.Column="0" Grid.Row="9" Text="Selenium: "  HorizontalOptions="Center"></Label>
+                                    <Label Grid.Column="1" Grid.Row="9" Text="{Binding Selenium.EstimatedAverageRequirement}"  HorizontalOptions="Center"></Label>
+                                    <Label Grid.Column="2" Grid.Row="9" Text="{Binding Selenium.RecommendedDietaryIntake}"  HorizontalOptions="Center"></Label>
+                                    <Label Grid.Column="3" Grid.Row="9" Text="N/A"  HorizontalOptions="Center"></Label>
+                                    <Label Grid.Column="4" Grid.Row="9" Text="{Binding Selenium.UpperLevelOfIntake}"  HorizontalOptions="Center"></Label>
+                                    <Label Grid.Column="5" Grid.Row="9" Text="mg"  HorizontalOptions="Center"></Label>
+                                </Grid>
+                                    </border:SfBorder>
+                            </ViewCell>
+                            <TextCell TextColor="CadetBlue" Height="26" Text="Source: https://www.nrv.gov.au/nutrients"></TextCell>
+                            <TextCell TextColor="Black" Height="24" Text="EAR* - Estimated Average Requirement"></TextCell>
+                            <TextCell TextColor="Black" Height="24" Text="RDI* - Recommended Dietary Intake"></TextCell>
+                            <TextCell TextColor="Black" Height="24" Text="AI* - Adequate Intake"></TextCell>
+                            <TextCell TextColor="Black" Height="24" Text="UI* - Upper Level Of Intake"></TextCell>
+                    </TableSection>
+
+                        <TableSection Title="Percentage Visualization">
+                            <ViewCell>
+                                <Grid >
+
+                                    <chart:SfChart HeightRequest="450">
+
+                                        <chart:SfChart.PrimaryAxis>
+
+                                            <chart:CategoryAxis>
+                                                <chart:CategoryAxis.Title>
+                                                    <chart:ChartAxisTitle Text="Mineral(by symbol)"></chart:ChartAxisTitle>
+                                                </chart:CategoryAxis.Title>
+                                            </chart:CategoryAxis>
+
+                                        </chart:SfChart.PrimaryAxis>
+
+                                        <chart:SfChart.SecondaryAxis>
+
+                                            <chart:NumericalAxis>
+                                                <chart:NumericalAxis.Title>
+                                                    <chart:ChartAxisTitle Text="Percentage relative to daily recommended intake"></chart:ChartAxisTitle>
+                                                </chart:NumericalAxis.Title>
+                                            </chart:NumericalAxis>
+
+                                        </chart:SfChart.SecondaryAxis>
+
+                                        <chart:SfChart.Series>
+                                            <chart:ColumnSeries Label="Mineral Percentages" ItemsSource="{Binding ChartMinerals}" XBindingPath="Name" 
+                                                                YBindingPath="Percentage" EnableTooltip="True">
+                                                <chart:ColumnSeries.DataMarker>
+
+                                                    <chart:ChartDataMarker/>
+
+                                                </chart:ColumnSeries.DataMarker>
+
+                                            </chart:ColumnSeries>
+
+                                            <chart:LineSeries Label="Recommend Percentage"  ItemsSource="{Binding ChartMinerals}" XBindingPath="Name"
+                                                              YBindingPath="Line">
+
+                                                
+
+                                            </chart:LineSeries>
+                                        </chart:SfChart.Series>
+
+                                        <chart:SfChart.Legend>
+
+                                            <chart:ChartLegend/>
+
+                                        </chart:SfChart.Legend>
+
+                                    </chart:SfChart>
+                                </Grid>
+
+                            </ViewCell>
+                        </TableSection>
+
+                        <TableSection Title="Final Report Messages">
+                            <ViewCell>
+                                
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*"/>
+                                        <ColumnDefinition Width="3*"/>
+                                    </Grid.ColumnDefinitions>
+
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+
+                                    <Label Grid.Row="0" Grid.Column="0" Text="Phosphorus: "></Label>
+                                    <Label Grid.Row="0" Grid.Column="1" Text="{Binding PhosphorusReport}"></Label>
+
+                                    <Label Grid.Row="1" Grid.Column="0" Text="Potassium: "></Label>
+                                    <Label Grid.Row="1" Grid.Column="1" Text="{Binding PotassiumReport}"></Label>
+
+                                    <Label Grid.Row="2" Grid.Column="0" Text="Sodium: "></Label>
+                                    <Label Grid.Row="2" Grid.Column="1" Text="{Binding SodiumReport}"></Label>
+
+                                    <Label Grid.Row="3" Grid.Column="0" Text="Calcium: "></Label>
+                                    <Label Grid.Row="3" Grid.Column="1" Text="{Binding CalciumReport}"></Label>
+
+                                    <Label Grid.Row="4" Grid.Column="0" Text="Iron: "></Label>
+                                    <Label Grid.Row="4" Grid.Column="1" Text="{Binding IronReport}"></Label>
+
+                                    <Label Grid.Row="5" Grid.Column="0" Text="Magnesium: "></Label>
+                                    <Label Grid.Row="5" Grid.Column="1" Text="{Binding MagnesiumReport}"></Label>
+
+                                    <Label Grid.Row="6" Grid.Column="0" Text="Zinc: "></Label>
+                                    <Label Grid.Row="6" Grid.Column="1" Text="{Binding ZincReport}"></Label>
+
+                                    <Label Grid.Row="7" Grid.Column="0" Text="Copper: "></Label>
+                                    <Label Grid.Row="7" Grid.Column="1" Text="{Binding CopperReport}"></Label>
+
+                                    <Label Grid.Row="8" Grid.Column="0" Text="Selenium: "></Label>
+                                    <Label Grid.Row="8" Grid.Column="1" Text="{Binding SeleniumReport}"></Label>
+
+                                </Grid>
+                                    
+                            </ViewCell>
+                        </TableSection>
+
+                    </TableRoot>
+                </TableView>
+            </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>
